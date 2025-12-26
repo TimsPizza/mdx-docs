@@ -2,14 +2,19 @@
 title: "test"
 summary: "test"
 status: "archived"
-originalCategory: "archived"
+originalCategory: "default"
 uid: "b6205598-7b6f-4e60-8c9f-28e883e94378"
 createdAt: 1766529424
-updatedAt: 1766783493
+updatedAt: 1766785509
 ---
 
+import Image from '@/components/mdx/components/mdx-image'
 
+import ImageGrid from '@/components/mdx/components/image-grid'
 
+import AudioPlayer from '@/components/mdx/components/audio-player'
+
+import VideoPlayer from '@/components/mdx/components/video-player'
 
 # MDX Component Showcase
 
@@ -17,15 +22,15 @@ This document exercises the custom MDX components wired into the editor and
 
 renderer so you can preview styling and behavior in one place.
 
+<Table headers={["Column 1","Column 2"]} rows={[["Row 1","Value 1"],["Row 2","Value 2"]]} />
+
 ## Headings and Text
 
 Here is a paragraph with **bold**, *italic*, and `inline code`.
 
-- Bullet item one
-
-- Bullet item two
-
-- Bullet item three
+* Bullet item one
+* Bullet item two
+* Bullet item three
 
 > A short blockquote to confirm prose styling works as expected.
 
@@ -51,76 +56,38 @@ const getAuthorLabel = (author: Author) => {
 
 ## Image
 
-<Image
-
-  src="/hero.png"
-
-  alt="Local hero image"
-
-  caption="Local image from public/hero.png"
-
-  width={1200}
-
-  height={630}
-
-/>
+<Image src="/hero.png" alt="Local hero image" caption="Local image from public/hero.png" width={1200} height={630} />
 
 ## Image Grid
 
-<ImageGrid
-
-  img_urls={["/hero.png", "/globe.svg", "/window.svg", "/vercel.svg"]}
-
-  columns={2}
-
-/>
+<ImageGrid img_urls={["/hero.png", "/globe.svg", "/window.svg", "/vercel.svg"]} columns={2} />
 
 ## Audio Player
 
-<AudioPlayer
-
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
-
-  title="Sample audio clip"
-
-  controls={true}
-
-/>
+<AudioPlayer src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" title="Sample audio clip" controls={true} />
 
 ## Video Player
 
-<VideoPlayer
-
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-
-  title="Sample video clip"
-
-  poster="/hero.png"
-
-  controls={true}
-
-  muted={true}
-
-/>
+<VideoPlayer src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" title="Sample video clip" poster="/hero.png" controls={true} muted={true} />
 
 ## Table
 
 <Table
-
   caption="Feature matrix"
-
   headers={["Feature", "Status"]}
-
   rows={[
 
-    ["MDX toolbar", "Enabled"],
+["MDX toolbar", "Enabled"],
 
-    ["Custom components", "Enabled"],
+["Custom components", "Enabled"],
 
-    ["Table rendering", "Enabled"],
+["Table rendering", "Enabled"],
 
-  ]}
-
+]}
   align={["left", "right"]}
-
 />
+
+|   |   |   |
+| - | - | - |
+|   |   |   |
+|   |   |   |
