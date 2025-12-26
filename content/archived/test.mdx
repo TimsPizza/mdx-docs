@@ -2,14 +2,132 @@
 title: "test"
 summary: "test"
 status: "archived"
+originalCategory: "archived"
 uid: "b6205598-7b6f-4e60-8c9f-28e883e94378"
 createdAt: 1766529424
-updatedAt: 1766530687
+updatedAt: 1766776871
 ---
 
+\---
 
+title: "MDX Component Showcase"
 
+summary: "Example document demonstrating custom MDX components."
 
+tags: \["mdx", "components", "example"]
 
+\---
 
-test
+\# MDX Component Showcase
+
+This document exercises the custom MDX components wired into the editor and
+
+renderer so you can preview styling and behavior in one place.
+
+\## Headings and Text
+
+Here is a paragraph with \*\*bold\*\*, \*italic\*, and \`inline code\`.
+
+\- Bullet item one
+
+\- Bullet item two
+
+\- Bullet item three
+
+\> A short blockquote to confirm prose styling works as expected.
+
+\## Code Block
+
+\`\`\`ts
+
+type Author \= \{
+
+&#x20; name: string;
+
+&#x20; posts: number;
+
+};
+
+const getAuthorLabel \= (author: Author) \=> \{
+
+&#x20; return \`$\{author.name} ($\{author.posts} posts)\`;
+
+};
+
+\`\`\`
+
+\## Image
+
+\<Image
+
+&#x20; src\="/hero.png"
+
+&#x20; alt\="Local hero image"
+
+&#x20; caption\="Local image from public/hero.png"
+
+&#x20; width\=\{1200}
+
+&#x20; height\=\{630}
+
+/>
+
+\## Image Grid
+
+\<ImageGrid
+
+&#x20; img\_urls\=\{\["/hero.png", "/globe.svg", "/window.svg", "/vercel.svg"]}
+
+&#x20; columns\=\{2}
+
+/>
+
+\## Audio Player
+
+\<AudioPlayer
+
+&#x20; src\="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+
+&#x20; title\="Sample audio clip"
+
+&#x20; controls\=\{true}
+
+/>
+
+\## Video Player
+
+\<VideoPlayer
+
+&#x20; src\="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+
+&#x20; title\="Sample video clip"
+
+&#x20; poster\="/hero.png"
+
+&#x20; controls\=\{true}
+
+&#x20; muted\=\{true}
+
+/>
+
+\## Table
+
+\<Table
+
+&#x20; caption\="Feature matrix"
+
+&#x20; headers\=\{\["Feature", "Status"]}
+
+&#x20; rows\=\{\[
+
+&#x20;   \["MDX toolbar", "Enabled"],
+
+&#x20;   \["Custom components", "Enabled"],
+
+&#x20;   \["Table rendering", "Enabled"],
+
+&#x20; ]}
+
+&#x20; align\=\{\["left", "right"]}
+
+/>
