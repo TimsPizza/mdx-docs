@@ -5,7 +5,7 @@ status: "archived"
 originalCategory: "default"
 uid: "b6205598-7b6f-4e60-8c9f-28e883e94378"
 createdAt: 1766529424
-updatedAt: 1766785509
+updatedAt: 1766786077
 ---
 
 import Image from '@/components/mdx/components/mdx-image'
@@ -22,7 +22,7 @@ This document exercises the custom MDX components wired into the editor and
 
 renderer so you can preview styling and behavior in one place.
 
-<Table headers={["Column 1","Column 2"]} rows={[["Row 1","Value 1"],["Row 2","Value 2"]]} />
+
 
 ## Headings and Text
 
@@ -37,7 +37,6 @@ Here is a paragraph with **bold**, *italic*, and `inline code`.
 ## Code Block
 
 ```ts
-
 type Author = {
 
   name: string;
@@ -69,25 +68,3 @@ const getAuthorLabel = (author: Author) => {
 ## Video Player
 
 <VideoPlayer src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" title="Sample video clip" poster="/hero.png" controls={true} muted={true} />
-
-## Table
-
-<Table
-  caption="Feature matrix"
-  headers={["Feature", "Status"]}
-  rows={[
-
-["MDX toolbar", "Enabled"],
-
-["Custom components", "Enabled"],
-
-["Table rendering", "Enabled"],
-
-]}
-  align={["left", "right"]}
-/>
-
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
