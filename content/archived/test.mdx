@@ -5,119 +5,119 @@ status: "archived"
 originalCategory: "archived"
 uid: "b6205598-7b6f-4e60-8c9f-28e883e94378"
 createdAt: 1766529424
-updatedAt: 1766777205
+updatedAt: 1766781533
 ---
 
-\# MDX Component Showcase
+# MDX Component Showcase
 
 This document exercises the custom MDX components wired into the editor and
 
 renderer so you can preview styling and behavior in one place.
 
-\## Headings and Text
+## Headings and Text
 
-Here is a paragraph with \*\*bold\*\*, \*italic\*, and \`inline code\`.
+Here is a paragraph with **bold**, *italic*, and `inline code`.
 
-\- Bullet item one
+- Bullet item one
 
-\- Bullet item two
+- Bullet item two
 
-\- Bullet item three
+- Bullet item three
 
-\> A short blockquote to confirm prose styling works as expected.
+> A short blockquote to confirm prose styling works as expected.
 
-\## Code Block
+## Code Block
 
-\`\`\`ts
+```ts
 
-type Author \= \{
+type Author = {
 
-&#x20; name: string;
+  name: string;
 
-&#x20; posts: number;
-
-};
-
-const getAuthorLabel \= (author: Author) \=> \{
-
-&#x20; return \`$\{author.name} ($\{author.posts} posts)\`;
+  posts: number;
 
 };
 
-\`\`\`
+const getAuthorLabel = (author: Author) => {
 
-\## Image
+  return `${author.name} (${author.posts} posts)`;
 
-\<Image
+};
 
-&#x20; src\="/hero.png"
+```
 
-&#x20; alt\="Local hero image"
+## Image
 
-&#x20; caption\="Local image from public/hero.png"
+<Image
 
-&#x20; width\=\{1200}
+  src="/hero.png"
 
-&#x20; height\=\{630}
+  alt="Local hero image"
 
-/>
+  caption="Local image from public/hero.png"
 
-\## Image Grid
+  width={1200}
 
-\<ImageGrid
-
-&#x20; img\_urls\=\{\["/hero.png", "/globe.svg", "/window.svg", "/vercel.svg"]}
-
-&#x20; columns\=\{2}
+  height={630}
 
 />
 
-\## Audio Player
+## Image Grid
 
-\<AudioPlayer
+<ImageGrid
 
-&#x20; src\="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+  img_urls={["/hero.png", "/globe.svg", "/window.svg", "/vercel.svg"]}
 
-&#x20; title\="Sample audio clip"
-
-&#x20; controls\=\{true}
+  columns={2}
 
 />
 
-\## Video Player
+## Audio Player
 
-\<VideoPlayer
+<AudioPlayer
 
-&#x20; src\="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
 
-&#x20; title\="Sample video clip"
+  title="Sample audio clip"
 
-&#x20; poster\="/hero.png"
-
-&#x20; controls\=\{true}
-
-&#x20; muted\=\{true}
+  controls={true}
 
 />
 
-\## Table
+## Video Player
 
-\<Table
+<VideoPlayer
 
-&#x20; caption\="Feature matrix"
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 
-&#x20; headers\=\{\["Feature", "Status"]}
+  title="Sample video clip"
 
-&#x20; rows\=\{\[
+  poster="/hero.png"
 
-&#x20;   \["MDX toolbar", "Enabled"],
+  controls={true}
 
-&#x20;   \["Custom components", "Enabled"],
+  muted={true}
 
-&#x20;   \["Table rendering", "Enabled"],
+/>
 
-&#x20; ]}
+## Table
 
-&#x20; align\=\{\["left", "right"]}
+<Table
+
+  caption="Feature matrix"
+
+  headers={["Feature", "Status"]}
+
+  rows={[
+
+    ["MDX toolbar", "Enabled"],
+
+    ["Custom components", "Enabled"],
+
+    ["Table rendering", "Enabled"],
+
+  ]}
+
+  align={["left", "right"]}
 
 />
